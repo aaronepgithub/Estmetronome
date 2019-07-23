@@ -35,30 +35,50 @@
     /* font-weight: bold; */
   /* } */
 
-  input.xlFont {font-size:1.75rem;font-weight:bold;} /*1rem = 16px*/
+  input.xlFont {font-size:1.25rem;font-weight:bold;} /*1rem = 16px*/
+  h3 {font-size:1.25rem;} /*1rem = 16px*/
+  div.card-body {padding-top:8px;padding-bottom:10px;}
+  p.pmargin {margin-bottom:4px;}
 
-/* Small devices (landscape phones, 544px and up) */
-@media (min-width: 544px) {
-  h3 {font-size:1.75rem;} /*1rem = 16px*/
-  input.xlFont {font-size:1.75rem;font-weight:bold;} /*1rem = 16px*/
+
+  /* iPhone SE, etc */
+  @media (min-width: 300px) {
+    h3 {font-size:1.25rem;} /*1rem = 16px*/
+    input.xlFont {font-size:1.25rem;font-weight:bold;} /*1rem = 16px*/
+  }
+
+/* iPhone 678) */
+@media (min-width: 344px) {
+  h3 {font-size:1.65rem;} /*1rem = 16px*/
+  input.xlFont {font-size:1.65rem;font-weight:bold;} /*1rem = 16px*/
+}
+
+/* iPhone 678+) */
+@media (min-width: 400px) {
+  h3 {font-size:1.85rem;} /*1rem = 16px*/
+  input.xlFont {font-size:1.85rem;font-weight:bold;} /*1rem = 16px*/
+  div.card-body {padding-top:12px;padding-bottom:12px;}
 }
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {
   h3 {font-size:2rem;} /*1rem = 16px*/
   input.xlFont {font-size:2rem;font-weight:bold;} /*1rem = 16px*/
+  div.card-body {padding-top:20px;padding-bottom:20px;}
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   h3 {font-size:2.5rem;} /*1rem = 16px*/
   input.xlFont {font-size:2.5rem;font-weight:bold;} /*1rem = 16px*/
+  div.card-body {padding-top:20px;padding-bottom:20px;}
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   h3 {font-size:3rem;} /*1rem = 16px*/
   input.xlFont {font-size:3rem;font-weight:bold;} /*1rem = 16px*/
+  div.card-body {padding-top:20px;padding-bottom:20px;}
 }
 
   h3.bld {
@@ -66,8 +86,8 @@
   }
 
   div.mgn {
-    margin-bottom: 3px;
-    margin-top: 6px;
+    margin-bottom: 1px;
+    margin-top: 3px;
     border: 3px solid rgba(0,0,0,.125);
   }
 
@@ -254,7 +274,7 @@
 
 <div class="card mgn"><div class="card-body">
 
-  <p>
+  <p class="pmargin">
     <button id="start" type="button" class="btn btn-primary btn-lg">START</button>
     <!-- <button id="lap">Lap</button> -->
     <!-- <button id="pause">Pause</button> -->
@@ -303,6 +323,20 @@
 
 <div class="card mgn"><div class="card-body">
 
+      <p class="xlFont">
+        <div id="lapsComplete" class="xlFont">
+          <h3>0 | Cycles Complete</h3>
+        </div>
+      </p>
+
+      <p class="pmargin"><button id="reset" type="button" class="btn btn-primary btn-lg">RESET</button></p>
+
+</div></div>
+
+
+
+<div class="card mgn"><div class="card-body">
+
       <!-- <p> -->
         <h3>Time to Limitation [ss]</h3>
         <input id="clockfaceInSeconds" type="text" placeholder="00.0" class="form-control xlFont">
@@ -315,17 +349,7 @@
 
 
 
-<div class="card mgn"><div class="card-body">
 
-      <p class="xlFont">
-        <div id="lapsComplete" class="xlFont">
-          <h3>0 | Cycles Complete</h3>
-        </div>
-      </p>
-
-      <p><button id="reset" type="button" class="btn btn-primary btn-lg">RESET</button></p>
-
-</div></div>
 
 
 
